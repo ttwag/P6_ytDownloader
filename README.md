@@ -11,7 +11,7 @@ Open **Terminal** in Mac and enter these **2 commands** in your home directory f
 
 ```$ git clone "https://github.com/ttwag/P6_ytDownloader/tree/main"```
 
-```$ mv $HOME/P6_ytDownloader/yt.sh $HOME```
+```$ mv $HOME/P6_ytDownloader/yt.sh $HOME/```
 
 ### Method 2
 Download the .zip file from This GitHub Page -> Code -> Download ZIP and unzip the file.
@@ -22,7 +22,7 @@ Move the unzipped folder from download to your home directory by
 
 then 
 
-```$ mv $HOME/P6_ytDownloader/yt.sh $HOME```
+```$ mv $HOME/P6_ytDownloader/yt.sh $HOME/```
 
 ### Note for Method 1:
 
