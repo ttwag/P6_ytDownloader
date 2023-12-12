@@ -6,13 +6,25 @@ the appropriate music folder used by the Music app in macOS.
 ## Installation
 This program only runs with **macOS**.
 
+### Method 1
 Open **Terminal** in Mac and enter these **2 commands** in your home directory for installation:
 
 ```$ git clone "https://github.com/ttwag/P6_ytDownloader/tree/main"```
 
-```$ mv ./P6_ytDownloader/yt.sh .```
+```$ mv $HOME/P6_ytDownloader/yt.sh $HOME```
 
-**Note:**
+### Method 2
+Download the .zip file from GitHub -> Code -> Download ZIP and unzip the file.
+
+Move the unzipped folder from download to your home directory by
+
+```$ mv $HOME/Downloads/P6_ytDownloader-main $HOME/P6_ytDownloader```
+
+then 
+
+```$ mv $HOME/P6_ytDownloader/yt.sh $HOME```
+
+### Note for Method 1:
 
 Your computer needs **git** to be installed, which may require you to install the **homebrew** package installer.
 
