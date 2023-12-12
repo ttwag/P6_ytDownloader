@@ -14,7 +14,7 @@ Open **Terminal** in Mac and enter these **2 commands** in your home directory f
 ```$ mv $HOME/P6_ytDownloader/yt.sh $HOME```
 
 ### Method 2
-Download the .zip file from GitHub -> Code -> Download ZIP and unzip the file.
+Download the .zip file from This GitHub Page -> Code -> Download ZIP and unzip the file.
 
 Move the unzipped folder from download to your home directory by
 
