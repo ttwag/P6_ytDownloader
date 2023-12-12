@@ -21,7 +21,7 @@ if len(argv) == 3:
 title = helpers.safe_filename(name)  # Need to comply the pytube library video naming standards
 print("Title: ", yt.title)
 print("File Name: ", name)
-print("View: ", yt.views)  # Change this to something else
+print("Author: ", yt.author)  # Change this to something else
 yt.streams.get_highest_resolution().download(filename=title+".mp4")
 
 # Create file path for mp4 to mp3

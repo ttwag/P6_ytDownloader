@@ -1,36 +1,57 @@
 # P6_ytDownloader
-Help macOS user to download YouTube music through the command line interface.
-Video
-## Installation and Usage
+Help macOS user to download YouTube music through the command line interface. The music is downloaded to
+the appropriate music folder used by the Music app in macOS.
+
+**Video Demonstration**
+## Installation
+This program only runs with **macOS**.
+
+Open **Terminal** in Mac and enter these **2 commands** in your home directory for installation:
+
+```$ git clone "https://github.com/ttwag/P6_ytDownloader/tree/main"```
+
+```$ mv ./P6_ytDownloader/yt.sh .```
+
+**Note:**
+
+Your computer needs **git** to be installed, which may require you to install the **homebrew** package installer.
+
+If you haven't installed git, do ```$ brew install git```. 
+If the brew command is not found, do 
+
+```$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
+
+to install homebrew or visit https://brew.sh for more help.
+
+## How to Use This Program
+### Download YouTube Music
+In the home directory where you downloaded this program, do 
+
+```$ zsh yt.sh "video's url" "file name of your choice"[optional]```
+
+```$ zsh yt.sh``` runs the script, yt.sh, that starts the program. 
+
+You also need to give the video's url and the optional file name. If no file name is given, 
+the default video title from YouTube is used. Remember to surround the inputs with quotation marks.
 
 ## Dependencies and File Structure
-* setup
+* This program is intended to be installed and called in user's home directory. To go to your home directory, do ```$ cd $HOME```.
 * bin and lib contains the files for setting up a Python virtual environment.
 * ytDownloader.py contains the main program that downloads the YouTube Music, storing it to desired location, and play the music.
+* The downloaded music is stored in the macOS Music app's library file path ```/Users/username/Music/Music/Media.localized/Music/"Unknown Artist"/"Unknown Album"```
+
 ## Development Environment
 The python code was developed using PycharmCE 2023.1.3, and the shell scripts were written via vim in macOS terminal.
+
+## Encountered Issues
+* There's an issue with the [.get_audio_only](https://github.com/pytube/pytube/issues/203) method in pytube, so this program needs to download
+the mp4 video file first and convert it to mp3 file, then delete the mp4. I used moviepy for the conversion.
+* Using the Music app in macOS to play .mp3 file also has some caveats. You need to ensure that the .mp3 file is 
+encoded with encoder and bit rate recognizable by the Music app, otherwise the duration of music could be incorrect. 
+Go to Music's settings to see what's recognizable.
+* The python library used by this program, pytube, downloads the music with YouTube video's title as the filename.
+However, it removes some special characters through the function safe_filename() in helper.py from pytube's source code.
+
 ## Helpful Links
-
-
-**What does this program do?**
-* When the user enters ```$ zsh yt.sh "url"``` in macOS terminal, the program downloads the .mp3 file of the
-music from url. The music will be stored in the Apple Music Library.
-* The program automatically plays the music through the Music app, then it deletes 
-the downloaded mp4 and mp3 files because the mp3 file would be copied to Music already. 
-* The remaining mp3 file will be stored in  
-`/Users/taowang/Music/Music/Media.localized/Music/Unknown Artist/Unknown Album/`
-* User could optionally add desired filename for the music.
-
-**Dependencies**
-* There's an issue with the .get_audio_only method in pytube, so this program needs to download
-the mp4 video file first then convert it to mp3 file.
-* However, this introduces dependencies on the ffmpeg command line tool, which converts mp4 to mp3.
-The user needs to install ffmpeg through ```$ brew intall ffmpeg```, and possibly install Homebrew.
-* Or we could do it through Moviepy to convert mp4 to mp3.
-
-**Note**
-* Apple Music reads VBR and video with hhigh kbps, so set bit rate to approximate VBR. Import settings in Music
-* Needs to run this through its own python interpreter.
-* Make sure the file path is right across machines.
-* Beaware that when pytube downloads a video the file name may not always be the title. In the source code, the library
-uses the function safe_filename() in helper.py from pytube.
+For more information about how to use python to download music from YouTube, visit https://youtu.be/vEQ8CXFWLZU?si=01VEvh60EG3NU7vM.
+I built this program based on project 2 in the video.
