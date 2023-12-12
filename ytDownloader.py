@@ -4,10 +4,12 @@ from pytube import YouTube
 from pytube import helpers
 from moviepy.editor import *
 from sys import argv
-"""
-This python program 
 
 """
+This python program fetch .mp4 video from YouTube through pytube, then convert it to .mp3 with moviepy and delete
+the .mp4 file. It will also play the music through the music app on macOS.
+"""
+
 # Get the video and specify its filename
 if len(argv) == 1:  # Check Input
     print("Give Me A YouTube Link")
