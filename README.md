@@ -3,6 +3,9 @@ Help macOS user to download YouTube music through the command line interface. Th
 the appropriate music folder used by the Music app in macOS.
 
 **Video Demonstration**
+<video height="640">
+    <source src="./demo.mov" alt="Issue Loading the Video">
+</video>
 ## Installation
 This program only runs with **macOS**.
 
