@@ -4,9 +4,12 @@ from pytube import YouTube
 from pytube import helpers
 from moviepy.editor import *
 from sys import argv
+"""
+This python program 
 
+"""
 # Get the video and specify its filename
-if len(argv) == 1:
+if len(argv) == 1:  # Check Input
     print("Give Me A YouTube Link")
     exit()
 link = argv[1]
@@ -14,6 +17,7 @@ yt = YouTube(link)
 name = yt.title
 if len(argv) == 3:
     name = argv[2]
+
 title = helpers.safe_filename(name)  # Need to comply the pytube library video naming standards
 print("Title: ", yt.title)
 print("File Name: ", name)

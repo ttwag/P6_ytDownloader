@@ -1,5 +1,16 @@
 # P6_ytDownloader
-Help the user to download YouTube music through the command line interface
+Help macOS user to download YouTube music through the command line interface.
+Video
+## Installation and Usage
+
+## Dependencies and File Structure
+* setup
+* bin and lib contains the files for setting up a Python virtual environment.
+* ytDownloader.py contains the main program that downloads the YouTube Music, storing it to desired location, and play the music.
+## Development Environment
+The python code was developed using PycharmCE 2023.1.3, and the shell scripts were written via vim in macOS terminal.
+## Helpful Links
+
 
 **What does this program do?**
 * When the user enters ```$ zsh yt.sh "url"``` in macOS terminal, the program downloads the .mp3 file of the
