@@ -29,7 +29,7 @@ In the home directory where you downloaded this program, do
 
 ```$ zsh yt.sh "video's url" "file name of your choice"[optional]```
 
-```$ zsh yt.sh``` runs the script, yt.sh, that starts the program. 
+yt.sh is a shell script that starts the program. 
 
 You also need to give the video's url and the optional file name. If no file name is given, 
 the default video title from YouTube is used. Remember to surround the inputs with quotation marks.
