@@ -6,17 +6,21 @@ from moviepy.editor import *
 from sys import argv
 
 # Get the video and specify its filename
+if len(argv) == 1:
+    print("Give Me A YouTube Link")
+    exit()
 link = argv[1]
-name = argv[2]
 yt = YouTube(link)
-if len(name) < 1: name = yt.title
+name = yt.title
+if len(argv) == 3:
+    name = argv[2]
+title = helpers.safe_filename(name)  # Need to comply the pytube library video naming standards
 print("Title: ", yt.title)
 print("File Name: ", name)
 print("View: ", yt.views)  # Change this to something else
-yt.streams.get_highest_resolution().download(filename=name)
+yt.streams.get_highest_resolution().download(filename=title+".mp4")
 
 # Create file path for mp4 to mp3
-title = helpers.safe_filename(name)  # Need to comply the pytube library video naming standards
 input_mp4 = "./" + title + ".mp4"
 user = getpass.getuser()  # Get the username for file path
 output_mp3 = "/Users/" + user + "/Music/Music/Media.localized/Music/Unknown Artist/Unknown Album/" + title + ".mp3"
