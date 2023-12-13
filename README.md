@@ -4,7 +4,7 @@ the appropriate music folder used by the Music app in macOS.
 
 **Video Demonstration**
 
-https://www.youtube.com/watch?v=PWUw3ZaalvU
+You can watch the demo.mp4 in the repository for how to use this tool.
 
 ## Installation
 This program only runs with **macOS**.
