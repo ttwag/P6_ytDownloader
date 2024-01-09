@@ -6,6 +6,12 @@ the appropriate music folder used by the Music app on macOS.
 
 **Video Demonstration**
 
+
+
+https://github.com/ttwag/P6_ytDownloader/assets/113254272/aef7cfc8-c61d-44b5-b47c-a0fe93ce1bd6
+
+
+
 You can watch the demo.mp4 in the media folder of the repository for how to use this tool.
 
 ## Installation
